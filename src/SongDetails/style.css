@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+.song-details-wrapper {
+    display: grid;
+    grid-template-areas:
+    "t t t t t"
+    "y y y y y"
+    "a a w w w"
+    "a a p p p"
+    "m m m m m"
+    "b . . . .";  
+    width: 90%;
+    margin: 0 auto;
+}
+
+.song-title-art {
+    grid-area: t;
+    display: flex;
+    justify-content: center;
+}
+
+.full-title {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin: 50px 0 0 0;
+    padding: 0;
+}
+
+.song-art-wrapper {
+    margin-top: 20px;
+}
+
+.song-art {
+    width: 120px;
+    border: solid 5px #FFF436;
+    border-radius: 60px;
+    margin-left: 50px;
+}
+
+.release-year {
+    grid-area: y;
+    font-size: 30px;
+    margin: 0 0 20px 0;
+    padding: 0 0 20px 0;
+    border-bottom: solid 5px #FFF436;
+}
+
+.album-image-wrapper {
+    grid-area: a;
+}
+.album-title{
+    font-size: 20px;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.album-title-italic {
+    font-style: italic;
+}
+
+.song-producer-wrapper {
+    grid-area: p;
+    margin: 0;
+    padding: 0 20px; 
+}
+
+.song-producer-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.producer-name-image {
+    width: 20%;
+}
+
+.producer-name, .writer-name {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+.producer-image {
+    width: 100px;
+}
+
+.song-writer-wrapper {
+    grid-area: w;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.song-writer-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.writer-name-image {
+    width: 20%;
+}
+
+.writer-image {
+    width: 100px;
+}
+
+.album-image-wrapper {
+    margin-bottom: 50px;
+    padding: 0 100px;
+}
+
+.album-image-wrapper img {
+    width: 300px;
+    border: solid 5px #FFF436;
+    border-radius: 20px;
+}
+
+.media-wrapper {
+    grid-area: m;
+    margin: 0;
+    padding: 0 20px; 
+    width: 100%;
+}
+
+.media-title, .producer-writer-title {
+    font-size: 25px;
+    font-variant: small-caps;
+    padding: 5px;
+    background-color: #FFF436;
+    border-bottom: solid 1px #FFF436;
+    border-radius: 10px;
+    margin: 20px 150px 0 150px;
+}
+
+.media-logo-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 5px auto;
+}
+
+.medium-logo {
+    width: 20%;
+    padding: 5px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-weight: 700;
+}
+
+.logo-img {
+    width: 30%;
+    margin: 10px auto;
+    display: block;
+}
+
+.back-button {
+    grid-area: b;
+    font-size: 20px;
+    font-variant: small-caps;
+    background-color: #000000;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding: 5px;
+    outline: none;
+    width: 60%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+

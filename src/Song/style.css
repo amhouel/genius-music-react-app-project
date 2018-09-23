@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+.song-wrapper {
+    width: 33%;
+    margin-top: 50px;
+}
+
+.song-item {
+    list-style: none;
+    font-size: 25px;
+    font-weight: 700;
+    font-variant: small-caps;
+}
+
+.song-item:hover {
+    font-size: 30px;
+    color: #247BA0;
+}
+
+.views {
+    padding: 0 0 5px 0;
+    margin: 0;
+    font-size: 15px;
+}
+
+.song-image {
+    border: solid 5px #FFF436;
+    border-radius: 20px;
+}
+
+.pointer {
+    cursor: pointer;
+}

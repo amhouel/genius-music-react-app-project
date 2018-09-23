@@ -1,0 +1,22 @@
+.landing {
+    background-image: url("./images/malte-wingen-381988-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.welcome-title {
+    margin: 0 auto;
+    padding-top: 40px;
+    font-size: 80px;
+}
+
+.welcome-subtitle {
+    font-size: 50px;
+    padding-top: 100px;
+    text-align: left;
+    margin-left: 50px;
+}

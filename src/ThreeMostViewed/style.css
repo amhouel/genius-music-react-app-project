@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+.most-viewed-songs {
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+.most-viewed-songs-list {
+    width: 50%;
+    margin-left: 670px;
+}
+
+.most-viewed-song {
+    font-size: 20px;
+    line-height: 40px;
+    text-align: left;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+}

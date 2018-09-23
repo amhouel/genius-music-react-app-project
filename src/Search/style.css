@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+.song-search {
+    margin: 100px auto;
+}
+
+.search-label {
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+.artist-input {
+    font-size: 20px;
+    padding: 5px 20px;
+    margin-left: 10px;
+    outline: none;
+    border: solid 1px #000000;
+    border-radius: 5px;
+}
+
+.search-button {
+    font-size: 15px;
+    font-weight: 700;
+    font-variant: small-caps;
+    background-color: #000000;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-left: 10px;
+    padding: 8px 5px;
+    outline: none;
+}
+
+.pointer {
+    cursor: pointer;
+}

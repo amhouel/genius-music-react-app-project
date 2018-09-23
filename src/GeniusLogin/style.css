@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+.login {
+    background-color: #FFF436;
+    border: solid 1px #FFF436;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: underline;
+    font-variant: small-caps;
+    padding: 5px 10px;
+    align-self: center;
+    margin: 0 20px 0 0;
+}
+
+.login-link {
+    color: #000000;
+}
+
+.pointer {
+    cursor: pointer;
+}

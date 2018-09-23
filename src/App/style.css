@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.title-login {
+    display: flex;
+    justify-content: center;
+    background-color: #252525;
+}
+
+.title {
+    color: #FFF436;
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin: 0 auto;
+    padding: 40px 0 40px 150px;
+    text-transform: uppercase;
+}
+
+.artist-name {
+    text-transform: uppercase;
+    font-size: 40px;
+}
