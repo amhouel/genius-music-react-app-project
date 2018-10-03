@@ -8,17 +8,18 @@
 }
 
 .most-viewed-songs-list {
-    width: 50%;
-    margin-left: 670px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .most-viewed-song {
     font-size: 20px;
     line-height: 40px;
-    text-align: left;
+    text-align: center;
 }
 
-ol {
+ul {
     margin: 0;
     padding: 0;
+    list-style: none;
 }

@@ -20,13 +20,13 @@ function ThreeMostViewed(props) {
             {props.songList.length > 0 && (
                 <div>
                     <h2 className="most-viewed-songs">The 3 Most Viewed Songs</h2>
-                    <ol className="most-viewed-songs-list">
+                    <ul className="most-viewed-songs-list">
                         {getThreeMostViewed().map((song, index) => {
                             return (
                                 <li className="most-viewed-song" key={index}>{song[1]}</li>
                             )
                         })}
-                    </ol>
+                    </ul>
                 </div>
             )}
         </div>

@@ -11,8 +11,8 @@
     text-decoration: underline;
     font-variant: small-caps;
     padding: 5px 10px;
-    align-self: center;
-    margin: 0 20px 0 0;
+    margin: 0 auto;
+    width: 20%;
 }
 
 .login-link {
@@ -21,4 +21,18 @@
 
 .pointer {
     cursor: pointer;
+}
+
+@media screen and (max-width:800px){
+    .login {
+        width: 30%;
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .login {
+        width: 40%;
+        margin-top: 10px;
+    }
 }

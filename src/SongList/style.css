@@ -17,3 +17,8 @@ ul {
     margin: 0;
 }
 
+@media screen and (max-width:800px){
+    .song-list-wrapper{
+      display: block;
+    } 
+}

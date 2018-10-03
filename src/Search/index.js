@@ -18,7 +18,7 @@ class Search extends Component {
             <div className="song-search">
                 <form onSubmit={this.handleSubmit}>
                     <label className="search-label">
-                        Search Songs by Artist Name:
+                        Search Songs by Artist Name:<br/>
                         <input className="artist-input" type="text" value={this.value} placeholder="Type artist name here" onChange={this.handleChange}></input>
                     </label>
                     <button className="search-button pointer" type="submit">Search</button>

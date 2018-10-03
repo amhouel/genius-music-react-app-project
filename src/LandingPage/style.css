@@ -10,7 +10,7 @@
 
 .welcome-title {
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 20px;
     font-size: 80px;
 }
 
@@ -19,4 +19,41 @@
     padding-top: 100px;
     text-align: left;
     margin-left: 50px;
+}
+
+@media screen and (max-width:1300px){
+    .welcome-title {
+        width: 40%;
+        text-align: left;
+        margin-left: 20px;
+    }
+     .welcome-subtitle {
+        width: 30%;
+       
+    }
+}
+
+@media screen and (max-width:1000px){
+    .welcome-subtitle {
+        width: 50%;
+    } 
+    
+}
+
+@media screen and (max-width:850px){
+    .welcome-title {
+        font-size: 70px;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+    }
+   
+}
+
+@media screen and (max-width:500px){
+    .welcome-subtitle {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
 }

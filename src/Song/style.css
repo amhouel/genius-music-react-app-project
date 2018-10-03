@@ -3,19 +3,20 @@
 }
 
 .song-wrapper {
-    width: 33%;
+    width: 30%;
     margin-top: 50px;
+    flex-shrink: 0;
 }
 
 .song-item {
     list-style: none;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     font-variant: small-caps;
+    width:100%;
 }
 
 .song-item:hover {
-    font-size: 30px;
     color: #247BA0;
 }
 
@@ -32,4 +33,24 @@
 
 .pointer {
     cursor: pointer;
+}
+
+@media screen and (max-width:1200px){
+    .song-wrapper {
+        width: 50%;
+        margin-top: 50px;
+        flex-shrink: 0;
+    }
+}
+
+@media screen and (max-width:800px){
+    .song-wrapper {
+        width: 90%;
+        margin-top: 50px;
+        flex-shrink: 0;
+        margin: 0 auto;
+    }
+    .song-item {
+        margin-top: 20px;
+    }
 }

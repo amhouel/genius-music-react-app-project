@@ -18,7 +18,8 @@
 .song-title-art {
     grid-area: t;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 90%;
 }
 
 .full-title {
@@ -26,31 +27,34 @@
     font-size: 50px;
     margin: 50px 0 0 0;
     padding: 0;
+    width: 70%;
 }
 
 .song-art-wrapper {
     margin-top: 20px;
+    width: 10%;
 }
 
 .song-art {
-    width: 120px;
+    width: 200px;
     border: solid 5px #FFF436;
-    border-radius: 60px;
-    margin-left: 50px;
+    border-radius: 100px;
+    margin: 0;
 }
 
 .release-year {
     grid-area: y;
-    font-size: 30px;
-    margin: 0 0 20px 0;
+    font-size: 40px;
+    margin: 10px auto;
     padding: 0 0 20px 0;
     border-bottom: solid 5px #FFF436;
+    width: 90%;
 }
 
 .album-image-wrapper {
     grid-area: a;
 }
-.album-title{
+.album-title {
     font-size: 20px;
     margin: 20px 0;
     padding: 0;
@@ -70,10 +74,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-.producer-name-image {
-    width: 20%;
 }
 
 .producer-name, .writer-name {
@@ -98,8 +98,9 @@
     flex-wrap: wrap;
 }
 
-.writer-name-image {
+.writer-name-image, .producer-name-image {
     width: 20%;
+    margin: 0 10px;
 }
 
 .writer-image {
@@ -167,12 +168,89 @@
     border-radius: 5px;
     color: #ffffff;
     margin-bottom: 20px;
-    padding: 5px;
+    padding: 10px 5px;
     outline: none;
-    width: 60%;
+    width: 100%;
 }
 
 .pointer {
     cursor: pointer;
 }
 
+@media screen and (max-width:1300px){
+    .writer-name-image, .producer-name-image {
+        width: 30%;
+    }
+    .back-button {
+        width: 100%;
+    }
+    .song-title-art {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .song-art-wrapper {
+        margin: 20px auto;
+        width: 50%;
+    }
+    .full-title {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1100px){
+
+    .song-details-wrapper {
+        display: block;
+    }
+    .writer-name-image, .producer-name-image {
+        width: 30%;
+    }
+    .song-art-wrapper {
+        width: 100%;
+    }
+    .full-title {
+        width: 100%;
+    }
+    .release-year {
+        width: 100%;
+    }
+    .back-button {
+        width: 20%;
+        margin-bottom: 50px;
+    }
+    .medium-logo {
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width:700px){
+    .full-title {
+        font-size: 30px;
+        width: 100%;
+    }
+    .release-year {
+        font-size: 30px;
+    }
+    .album-image-wrapper {
+        padding: 0;
+    }
+    .album-title {
+        font-size: 30px;
+        width:100%;
+    }
+    .back-button, .media-title, .producer-writer-title {
+        width: 90%;
+        margin: 20px auto;
+    }
+    .back-button {
+        width: 30%;
+    }
+    .writer-name-image, .producer-name-image {
+        width: 50%;
+        margin: 20px auto;
+    }
+    .medium-logo {
+        width: 50%;
+    }
+}

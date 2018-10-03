@@ -19,8 +19,8 @@ class SongDetails extends Component {
             pageViews: "",
             songReleaseDate: "",
             songArt: "",
-            songAlbum: "",
-            albumArt: "",
+            songAlbum: "Sorry, we couldn't find the album",
+            albumArt: require("./images/steve-harvey-697236-unsplash.jpg"),
             songMedia: [],
             songProducers: [],
             songWriters: [],
@@ -28,30 +28,23 @@ class SongDetails extends Component {
     }
 
     componentDidMount = async () => {
-            const songData = await fetch(`https://api.genius.com/songs/${this.state.songId}?text_format=html&access_token=${this.state.accessToken}`);
-            const songDataJson = await songData.json();
+        const songData = await fetch(`https://api.genius.com/songs/${this.state.songId}?text_format=html&access_token=${this.state.accessToken}`);
+        const songDataJson = await songData.json();
 
-            if(!songDataJson.response.song.hasOwnProperty('album')){
-                songDataJson.response.song.album = {
-                    name:"Sorry, we couldn't find the album",
-                    cover_art_url: require("./images/steve-harvey-697236-unsplash.jpg"),
-                }
-            }
+        this.setState({
+            albumArt: songDataJson.response.song.album? songDataJson.response.song.album.cover_art_url : this.state.albumArt,
+            songAlbum: songDataJson.response.song.album? songDataJson.response.song.album.name : this.state.songAlbum,
+            songArt: songDataJson.response.song.song_art_image_thumbnail_url,
+            songReleasedDate: new Date(songDataJson.response.song.release_date).getFullYear(),
+            songFullTitle: songDataJson.response.song.title_with_featured,
+            songMedia: songDataJson.response.song.media,
+            pageViews: songDataJson.response.song.pageviews,
+            songProducers: songDataJson.response.song.producer_artists,
+            songWriters: songDataJson.response.song.writer_artists,
+        }, () => {
+            this.addMediumLogo();
+        });
 
-            this.setState({
-                albumArt: songDataJson.response.song.album.cover_art_url,
-                songAlbum: songDataJson.response.song.album.name,
-                songArt: songDataJson.response.song.song_art_image_thumbnail_url,
-                songReleasedDate: new Date(songDataJson.response.song.release_date).getFullYear(),
-                songFullTitle: songDataJson.response.song.title_with_featured,
-                songMedia: songDataJson.response.song.media,
-                pageViews: songDataJson.response.song.pageviews,
-                songProducers: songDataJson.response.song.producer_artists,
-                songWriters: songDataJson.response.song.writer_artists,
-            }, () => {
-                this.addMediumLogo();
-            });
-        
     }
 
     addMediumLogo = () => {
@@ -90,10 +83,10 @@ class SongDetails extends Component {
                 {this.state.currentPanel === "song details" && (
                     <div className="song-details-wrapper">
                         <div className="song-title-art">
-                            <h1 className="full-title">{this.state.songFullTitle} by {this.state.artist}</h1>
                             <div className="song-art-wrapper">
                                 <img className="song-art" src={this.state.songArt} alt="song art" />
                             </div>
+                            <h1 className="full-title">{this.state.songFullTitle} by {this.state.artist}</h1>
                         </div>
                         <p className="release-year">({this.state.songReleasedDate})</p>
                         <div className="album-image-wrapper">
